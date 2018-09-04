@@ -1,0 +1,22 @@
+body {
+    background-color: white;
+}
+
+#lines {
+  display: inline-block;
+}
+
+.line {
+  padding: 10px;
+  margin: 10px;
+}
+
+.line-name {
+  width: 60%;
+  float: left;
+}
+
+.status {
+  width: 40%;
+  float: right;
+}
