@@ -1,11 +1,15 @@
-const request = require('request');
+const rp = require('request-promise');
+
+const options = {
+  uri: 'https://api-neon.tfl.gov.uk/Line/Mode/tube/Status',
+  json: true,
+};
+
 
 let status = {
-  getStatuses: function() {
-    const statuses = request('https://api-neon.tfl.gov.uk/Line/Mode/tube/Status', (error, response, body) => {
-        return response;
-      });
-    }
+  getStatuses: () => {
+    return rp(options);
+  }
 };
 
 module.exports = status;

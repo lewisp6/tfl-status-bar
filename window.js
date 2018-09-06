@@ -1,14 +1,10 @@
-/* global $ */
-const request = require('request');
+const status = require('./tfl/status');
 
-$(() => {
-  request(
-    {
-      url: 'https://api-neon.tfl.gov.uk/Line/Mode/tube/Status',
-      json: true
-    }, (error, response, body) => {
-      body.forEach((element) => {
-        $(`#${element.id}`).text(element.lineStatuses[0]['statusSeverityDescription']);
-      });
+document.addEventListener('DOMContentLoaded', async function() {
+  const tubeStatuses = await status.getStatuses();
+  console.log('hello');
+  tubeStatuses.forEach((tubeLine) => {
+    const element = document.getElementById(`${tubeLine.id}`);
+    element.innerHTML = tubeLine.lineStatuses[0]['statusSeverityDescription'];
   });
 });

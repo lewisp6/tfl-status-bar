@@ -1,5 +1,6 @@
 body {
     background-color: white;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 #lines {
@@ -7,16 +8,62 @@ body {
 }
 
 .line {
-  padding: 10px;
-  margin: 10px;
 }
 
 .line-name {
-  width: 60%;
+  width: 55%;
   float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 4px;
+  color: white;
 }
 
 .status {
   width: 40%;
   float: right;
+}
+
+.bakerloo {
+  background: #B36305;
+}
+
+.central {
+  background: #E32017;
+}
+
+.circle {
+  background: #FFD300;
+}
+
+.district {
+  background: #00782A;
+}
+
+.hammersmith-city {
+  background: #F3A9BB;
+}
+
+.jubilee {
+  background: #A0A5A9;
+}
+
+.metropolitan {
+  background: #9B0056;
+}
+
+.northern {
+  background: #000000;
+}
+
+.piccadilly {
+  background: #003688;
+}
+
+.victoria {
+  background: #0098D4;
+}
+
+.waterloo-city {
+  background: #95CDBA;
 }
