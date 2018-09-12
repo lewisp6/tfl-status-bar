@@ -6,7 +6,7 @@ const options = {
 };
 
 
-let status = {
+const status = {
   getStatuses: async () => {
     const results = await rp(options);
     return results;
