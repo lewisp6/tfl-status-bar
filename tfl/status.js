@@ -7,8 +7,9 @@ const options = {
 
 
 let status = {
-  getStatuses: () => {
-    return rp(options);
+  getStatuses: async () => {
+    const results = await rp(options);
+    return results;
   }
 };
 

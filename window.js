@@ -1,17 +1,19 @@
+const R = require('ramda');
 const status = require('./tfl/status');
+const domWriter = require('./dom/domWriter');
 
 document.addEventListener('DOMContentLoaded', function() {
-  fetchTubeStatuses();
+  writeStatusesToDom();
 });
 
 window.addEventListener('focus', function() {
-  fetchTubeStatuses();
+  writeStatusesToDom();
 });
 
-async function fetchTubeStatuses() {
-  const tubeStatuses = await status.getStatuses();
+async function setTubeStatuses(tubeStatuses) {
   tubeStatuses.forEach((tubeLine) => {
-    const element = document.getElementById(`${tubeLine.id}`);
-    element.innerHTML = tubeLine.lineStatuses[0]['statusSeverityDescription'];
+    domWriter.writeDom(tubeLine.id, tubeLine.lineStatuses[0]['statusSeverityDescription']);
   });
 }
+
+const writeStatusesToDom = R.composeP(setTubeStatuses, status.getStatuses);

@@ -11,6 +11,7 @@
   "author": "Lewis Pearson",
   "license": "ISC",
   "dependencies": {
+    "ramda": "^0.25.0",
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
