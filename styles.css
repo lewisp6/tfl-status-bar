@@ -22,6 +22,7 @@ body {
 .status {
   width: 40%;
   float: right;
+  padding-top: 10px;
 }
 
 .bakerloo {
