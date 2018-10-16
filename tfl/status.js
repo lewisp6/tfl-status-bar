@@ -1,7 +1,7 @@
 const rp = require('request-promise');
 
 const options = {
-  uri: 'https://api-neon.tfl.gov.uk/Line/Mode/tube/Status',
+  uri: 'https://api.tfl.gov.uk/Line/Mode/tube/Status',
   json: true,
 };
 
